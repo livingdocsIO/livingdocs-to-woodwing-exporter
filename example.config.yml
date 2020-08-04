@@ -1,0 +1,9 @@
+# rename to config.yml
+LD_TOKEN: ''
+LD_SERVER_URL: 'https://server.livingdocs.io'
+USE_WW_ASSETS: 'false'
+WW_TEMPLATE_ID: ''
+WW_CATEGORY_ID: ''
+WW_PUBLICATION_ID: ''
+WW_USER: ''
+WW_PASSWORD: ''

@@ -1,0 +1,3819 @@
+{
+  "name": "living-times",
+  "label": "Living Times",
+  "version": "1.0.2",
+  "license": "Copyright (c) 2018 Livingdocs AG, all rights reserved",
+  "assets": {
+      "basePath": "https://cdn-jbxbgjz.livingdocs.io/designs/living-times/1.0.2",
+      "css": [
+          "./styles.css"
+      ],
+      "js": [
+          "./scripts.js"
+      ]
+  },
+  "componentProperties": {
+      "selected-menu": {
+          "label": "Selected Menu Item",
+          "type": "option",
+          "value": "is-selected",
+          "name": "selected-menu"
+      },
+      "position": {
+          "label": "Position",
+          "type": "select",
+          "options": [
+              {
+                  "caption": "Middle"
+              },
+              {
+                  "caption": "Left",
+                  "value": "left"
+              },
+              {
+                  "caption": "Right",
+                  "value": "right"
+              }
+          ],
+          "name": "position"
+      },
+      "image-position": {
+          "label": "Position",
+          "type": "select",
+          "options": [
+              {
+                  "caption": "Middle"
+              },
+              {
+                  "caption": "Left",
+                  "value": "image--left"
+              },
+              {
+                  "caption": "Right",
+                  "value": "image--right"
+              }
+          ],
+          "name": "image-position"
+      },
+      "teaser-image-position": {
+          "label": "Position",
+          "type": "select",
+          "options": [
+              {
+                  "caption": "Normal"
+              },
+              {
+                  "caption": "Left",
+                  "value": "teaser-card--left-aligned-img"
+              },
+              {
+                  "caption": "Right",
+                  "value": "teaser-card--right-aligned-img"
+              }
+          ],
+          "name": "teaser-image-position"
+      },
+      "container-style-breath": {
+          "label": "Extra margin",
+          "type": "option",
+          "value": "container--breath",
+          "name": "container-style-breath"
+      },
+      "container-style-lined": {
+          "label": "Add lines",
+          "type": "option",
+          "value": "container--lined",
+          "name": "container-style-lined"
+      },
+      "options": {
+          "id": "Options",
+          "label": "Options",
+          "type": "select",
+          "options": [
+              {
+                  "caption": "Default"
+              },
+              {
+                  "caption": "Stripe",
+                  "value": "half-height"
+              }
+          ],
+          "name": "options"
+      },
+      "featured": {
+          "label": "Featured",
+          "type": "option",
+          "value": "bleed",
+          "name": "featured"
+      },
+      "unordered": {
+          "label": "Unordered",
+          "type": "option",
+          "value": "bullet",
+          "name": "unordered"
+      },
+      "large": {
+          "label": "Large",
+          "type": "option",
+          "value": "large",
+          "name": "large"
+      },
+      "list-type": {
+          "label": "List Type",
+          "type": "select",
+          "options": [
+              {
+                  "caption": "Bullets"
+              },
+              {
+                  "caption": "Numbers",
+                  "value": "decimal"
+              },
+              {
+                  "caption": "Letters",
+                  "value": "lower-latin"
+              },
+              {
+                  "caption": "Romans",
+                  "value": "lower-roman"
+              }
+          ],
+          "name": "list-type"
+      }
+  },
+  "layouts": [
+      {
+          "name": "regular",
+          "caption": "Article",
+          "wrapper": "<div class=\"doc-section wrapper wrapper--in-editor wrapper--article\"></div>",
+          "defaultContent": [
+              {
+                  "identifier": "living-times.article-container",
+                  "position": "fixed",
+                  "containers": {
+                      "header": [
+                          {
+                              "identifier": "living-times.head"
+                          }
+                      ],
+                      "main": [
+                          {
+                              "identifier": "living-times.image"
+                          },
+                          {
+                              "identifier": "living-times.paragraph"
+                          },
+                          {
+                              "identifier": "living-times.teaser-author"
+                          }
+                      ],
+                      "sidebar-ads-top": [
+                          {
+                              "identifier": "living-times.free-html"
+                          }
+                      ],
+                      "sidebar": [
+                          {
+                              "identifier": "living-times.sidebar-title",
+                              "content": {
+                                  "title": "Most Popular"
+                              }
+                          },
+                          {
+                              "identifier": "living-times.teaser-sidebar"
+                          },
+                          {
+                              "identifier": "living-times.teaser-sidebar"
+                          },
+                          {
+                              "identifier": "living-times.teaser-sidebar"
+                          },
+                          {
+                              "identifier": "living-times.teaser-sidebar"
+                          }
+                      ],
+                      "sidebar-ads-bottom": [
+                          {
+                              "identifier": "living-times.free-html"
+                          }
+                      ],
+                      "footer": [
+                          {
+                              "identifier": "living-times.2-col-teaser-stack",
+                              "content": {
+                                  "title": "Recommended Stories"
+                              }
+                          }
+                      ]
+                  }
+              }
+          ],
+          "groups": [
+              {
+                  "label": "Headers",
+                  "components": [
+                      "head",
+                      "subtitle"
+                  ]
+              },
+              {
+                  "label": "Text",
+                  "components": [
+                      "paragraph",
+                      "quote",
+                      "separator",
+                      "bullet-list",
+                      "bullet-list-item"
+                  ]
+              },
+              {
+                  "label": "Images",
+                  "components": [
+                      "image"
+                  ]
+              },
+              {
+                  "label": "Sidebar",
+                  "components": [
+                      "sidebar-title",
+                      "teaser-sidebar"
+                  ]
+              },
+              {
+                  "label": "Footer",
+                  "components": [
+                      "2-col-teaser-stack"
+                  ]
+              },
+              {
+                  "label": "Gallery Teasers",
+                  "components": [
+                      "teaser-gallery-hero",
+                      "teaser-gallery"
+                  ]
+              },
+              {
+                  "label": "Video Teasers",
+                  "components": [
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ]
+              },
+              {
+                  "label": "Embeds",
+                  "components": [
+                      "teaser-author",
+                      "tweet",
+                      "iframe",
+                      "free-html"
+                  ]
+              }
+          ]
+      },
+      {
+          "name": "author",
+          "caption": "Author",
+          "wrapper": "<div class=\"doc-section wrapper wrapper--in-editor wrapper--article\"></div>",
+          "defaultContent": [
+              {
+                  "identifier": "living-times.author-container",
+                  "containers": {
+                      "main": [
+                          {
+                              "identifier": "living-times.author-head"
+                          },
+                          {
+                              "identifier": "living-times.whole",
+                              "styles": {
+                                  "container-style-lined": "container--lined"
+                              },
+                              "content": {
+                                  "title": "All Work"
+                              },
+                              "containers": {
+                                  "column-one": []
+                              }
+                          }
+                      ],
+                      "sidebar": []
+                  }
+              }
+          ],
+          "groups": [
+              {
+                  "label": "Headers",
+                  "components": [
+                      "author-head"
+                  ]
+              },
+              {
+                  "label": "Text",
+                  "components": [
+                      "paragraph",
+                      "quote",
+                      "separator",
+                      "bullet-list",
+                      "bullet-list-item"
+                  ]
+              },
+              {
+                  "label": "Images",
+                  "components": [
+                      "image"
+                  ]
+              },
+              {
+                  "label": "Containers",
+                  "components": [
+                      "whole",
+                      "halves",
+                      "halves-uneven",
+                      "thirds",
+                      "quarter"
+                  ]
+              },
+              {
+                  "label": "Sidebar",
+                  "components": [
+                      "sidebar-title",
+                      "teaser-sidebar"
+                  ]
+              },
+              {
+                  "label": "Embeds",
+                  "components": [
+                      "teaser-card",
+                      "tweet",
+                      "iframe",
+                      "free-html"
+                  ]
+              }
+          ]
+      },
+      {
+          "name": "gallery",
+          "caption": "Gallery",
+          "wrapper": "<div class=\"doc-section wrapper wrapper--in-editor wrapper--article\"></div>",
+          "defaultContent": [
+              {
+                  "identifier": "living-times.asset-content",
+                  "position": "fixed",
+                  "containers": {
+                      "header": [
+                          {
+                              "identifier": "living-times.asset-head-gallery",
+                              "position": "fixed"
+                          }
+                      ],
+                      "main": [
+                          {
+                              "identifier": "living-times.asset-container-gallery",
+                              "containers": {
+                                  "gallery": [
+                                      {
+                                          "identifier": "living-times.asset-image"
+                                      },
+                                      {
+                                          "identifier": "living-times.asset-image"
+                                      }
+                                  ]
+                              }
+                          }
+                      ]
+                  }
+              }
+          ],
+          "groups": [
+              {
+                  "label": "Image",
+                  "components": [
+                      "asset-image"
+                  ]
+              }
+          ]
+      },
+      {
+          "name": "video",
+          "caption": "Video",
+          "wrapper": "<div class=\"doc-section wrapper wrapper--in-editor wrapper--article\"></div>",
+          "defaultContent": [
+              {
+                  "identifier": "living-times.asset-content",
+                  "position": "fixed",
+                  "containers": {
+                      "header": [
+                          {
+                              "identifier": "living-times.asset-head-video",
+                              "position": "fixed"
+                          }
+                      ],
+                      "main": [
+                          {
+                              "identifier": "living-times.asset-container-video"
+                          }
+                      ]
+                  }
+              }
+          ],
+          "groups": [
+              {
+                  "label": "Embeds",
+                  "components": [
+                      "iframe",
+                      "free-html"
+                  ]
+              }
+          ]
+      },
+      {
+          "name": "page",
+          "caption": "Page",
+          "wrapper": "<div class=\"doc-section wrapper wrapper--in-editor wrapper--default\"></div>",
+          "defaultContent": [
+              {
+                  "identifier": "living-times.1-teaser-row"
+              },
+              {
+                  "identifier": "living-times.3-teaser-row",
+                  "styles": {
+                      "container-style-lined": "container--lined"
+                  }
+              },
+              {
+                  "identifier": "living-times.4-teaser-row-textonly",
+                  "styles": {
+                      "container-style-lined": "container--lined"
+                  }
+              },
+              {
+                  "identifier": "living-times.teaser-stack",
+                  "styles": {
+                      "container-style-lined": "container--lined"
+                  },
+                  "content": {
+                      "title": "The latest"
+                  }
+              },
+              {
+                  "identifier": "living-times.4-teaser-row",
+                  "styles": {
+                      "container-style-lined": "container--lined"
+                  },
+                  "content": {
+                      "title": "Spotlight"
+                  }
+              },
+              {
+                  "identifier": "living-times.video-block",
+                  "styles": {
+                      "container-style-lined": "container--lined"
+                  },
+                  "content": {
+                      "title": "Videos"
+                  }
+              },
+              {
+                  "identifier": "living-times.gallery-block",
+                  "styles": {
+                      "container-style-lined": "container--lined"
+                  },
+                  "content": {
+                      "title": "Photo Galleries"
+                  }
+              }
+          ],
+          "groups": [
+              {
+                  "label": "Headers",
+                  "components": [
+                      "section-title"
+                  ]
+              },
+              {
+                  "label": "Image Teasers",
+                  "components": [
+                      "1-teaser-row",
+                      "2-teaser-row",
+                      "3-teaser-row",
+                      "4-teaser-row",
+                      "teaser-stack"
+                  ]
+              },
+              {
+                  "label": "Text Teasers",
+                  "components": [
+                      "3-teaser-row-textonly",
+                      "4-teaser-row-textonly"
+                  ]
+              },
+              {
+                  "label": "Blocks",
+                  "components": [
+                      "authors-and-popular",
+                      "gallery-block",
+                      "video-block"
+                  ]
+              }
+          ]
+      }
+  ],
+  "defaultLayout": "regular",
+  "defaultComponents": {
+      "paragraph": "paragraph",
+      "image": "image",
+      "html": "free-html"
+  },
+  "imageRatios": {
+      "16:9": {
+          "label": "16:9",
+          "ratio": "16x9"
+      },
+      "1:1": {
+          "label": "1:1",
+          "ratio": "1x1"
+      },
+      "4:3": {
+          "label": "4:3",
+          "ratio": "4x3"
+      },
+      "3:4": {
+          "label": "3:4",
+          "ratio": "3x4"
+      }
+  },
+  "prefilledComponents": {
+      "head": {
+          "author": {
+              "value": "author",
+              "type": "computed"
+          }
+      }
+  },
+  "metadata": [
+      {
+          "identifier": "title",
+          "type": "text",
+          "matches": [
+              "head.title"
+          ],
+          "isEditable": true
+      },
+      {
+          "identifier": "description",
+          "type": "text",
+          "matches": [
+              "head.text",
+              "paragraph.text"
+          ],
+          "isEditable": true
+      },
+      {
+          "identifier": "teaserImage",
+          "type": "image",
+          "matches": [
+              "image.image",
+              "asset-image.image"
+          ],
+          "isEditable": true,
+          "imageRatios": [
+              "16:9"
+          ]
+      }
+  ],
+  "components": [
+      {
+          "name": "ad-leaderboard-resolved",
+          "html": "<div class=\"ad ad--leaderboard\"><a href=\"https://www.livingdocs.io\" target=\"_blank\"><img style=\"max-height: 90px\" src=\"/assets/images/ads/leaderboards/ad-exclusive.gif\" alt></a></div>",
+          "label": "Ad leaderboard",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_ad.svg"
+      },
+      {
+          "name": "ad-rectangle-resolved",
+          "html": "<div class=\"ad ad--sidebar\"><a href=\"https://www.livingdocs.io\" target=\"_blank\"><img style=\"max-height: 250px\" src=\"/assets/images/ads/rectangles/ad-standard.gif\" alt></a></div>",
+          "label": "Ad half page",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_ad.svg"
+      },
+      {
+          "name": "asset-html",
+          "html": "<div class=\"m-asset-html\"><div class=\"m-asset-html__iframe\" doc-html=\"iframe\"><div class=\"a-asset-placeholder\"></div></div><div class=\"a-asset-input\" doc-editable=\"caption\">Add image caption</div></div>",
+          "label": "Free HTML",
+          "description": "HTML with caption",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_embed.svg"
+      },
+      {
+          "name": "asset-head-gallery",
+          "html": "<div class=\"m-asset-head m-asset-head--gallery\"><div class=\"m-asset-head__bar\"><h2 class=\"m-asset-head__type\">Gallery</h2><div class=\"m-asset-picker\"><div class=\"a-asset-picker-option\"><svg width=\"16\" height=\"13\" viewbox=\"0 0 16 13\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4.69335 4.61891C8.4307 4.61891 12.1184 4.61891 15.8433 4.61891C15.8433 4.78033 15.8433 4.91691 15.8433 5.05349C15.8433 6.0468 15.8309 7.04011 15.8433 8.03343C15.8433 8.28176 15.7564 8.34384 15.5205 8.34384C12.0066 8.34384 8.49278 8.34384 4.96651 8.34384C4.84235 8.34384 4.66852 8.39351 4.66852 8.17001C4.69335 7.00287 4.69335 5.82331 4.69335 4.61891Z\"/><path d=\"M15.8433 0C15.8433 1.19198 15.8433 2.33429 15.8309 3.4766C15.8309 3.5511 15.7191 3.6256 15.6446 3.67526C15.6074 3.7001 15.5205 3.67526 15.4584 3.67526C11.9942 3.67526 8.53003 3.67526 5.06584 3.68768C4.74302 3.68768 4.66852 3.60076 4.66852 3.29035C4.69335 2.28462 4.68093 1.29131 4.68093 0.285578C4.68093 0.198663 4.69335 0.0993314 4.69335 0C8.41828 0 12.106 0 15.8433 0Z\"/><path d=\"M4.70573 9.2999C8.41824 9.2999 12.1059 9.2999 15.8184 9.2999C15.8309 9.41164 15.8433 9.51098 15.8433 9.61031C15.8433 10.6285 15.8433 11.6342 15.8433 12.6523C15.8433 12.9007 15.7936 13 15.5204 13C12.019 12.9876 8.51757 13 5.00372 13C4.80506 13 4.66848 12.9876 4.6809 12.7268C4.69331 11.6466 4.6809 10.554 4.69331 9.47373C4.69331 9.42406 4.70573 9.37439 4.70573 9.2999Z\"/><path d=\"M0.0496394 0C1.26645 0 2.48326 0 3.71249 0C3.7249 0.086915 3.73732 0.17383 3.73732 0.248329C3.73732 1.29131 3.7249 2.33429 3.74974 3.37727C3.74974 3.6256 3.67524 3.7001 3.42691 3.68768C2.38393 3.67526 1.34095 3.68768 0.297968 3.68768C0.148971 3.68768 0.0123901 3.7001 0.0123901 3.4766C0.0248066 2.3467 0.0123901 1.22923 0.0248066 0.0993314C0.0248066 0.0744986 0.037223 0.0372493 0.0496394 0Z\"/><path d=\"M0.0496657 4.63132C1.27889 4.63132 2.4957 4.63132 3.73735 4.63132C3.73735 5.16523 3.73735 5.67431 3.73735 6.1958C3.73735 6.82903 3.72493 7.46227 3.73735 8.08309C3.73735 8.30659 3.66285 8.36867 3.45177 8.36867C2.39637 8.35625 1.34097 8.36867 0.285578 8.36867C0.136581 8.36867 0 8.3935 0 8.15759C0.0124164 7.01528 0 5.88538 0 4.74307C0.0248329 4.69341 0.0372493 4.65616 0.0496657 4.63132Z\"/><path d=\"M0.0496657 9.2999C1.27889 9.2999 2.48329 9.2999 3.71251 9.2999C3.72493 9.38681 3.73735 9.46131 3.73735 9.54822C3.73735 10.5912 3.73735 11.6342 3.73735 12.6772C3.73735 12.9007 3.67526 12.9876 3.43935 12.9876C2.38395 12.9752 1.32856 12.9876 0.273161 12.9876C0.111748 12.9876 0 12.9752 0 12.7641C0.0124164 11.6466 0 10.5291 0.0124164 9.41164C0.0248329 9.3744 0.0372493 9.34956 0.0496657 9.2999Z\"/></svg></div><div class=\"a-asset-picker-option is-active\"><svg width=\"18\" height=\"13\" viewbox=\"0 0 18 13\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0.0278931 5.94553C0.0278931 3.95478 0.0278931 1.97739 0.0278931 0C5.69285 0 11.3578 0 17.0228 0C17.0228 1.99075 17.0228 3.95478 17.0228 5.94553C11.3578 5.94553 5.70621 5.94553 0.0278931 5.94553Z\"/><path d=\"M8.48529 12.9866C5.78643 12.9866 3.10092 12.9866 0.402047 13C0.0813891 13 -0.0121361 12.9065 0.00122466 12.5858C0.0145854 10.8222 0.0145854 9.07195 0.00122466 7.30833C0.00122466 7.02776 0.0947498 6.96095 0.361965 6.96095C5.79979 6.97431 11.251 6.97431 16.6888 6.96095C16.956 6.96095 17.0495 7.02776 17.0495 7.30833C17.0362 9.07195 17.0362 10.8489 17.0495 12.6125C17.0495 12.9198 16.9426 12.9866 16.6621 12.9866C13.9365 12.9866 11.2109 12.9866 8.48529 12.9866Z\"/></svg></div></div></div><div class=\"m-asset-head__section\"><h3 class=\"a-asset-section-title\">Title</h3><div class=\"a-asset-input\" doc-editable=\"title\">Gallery Title</div></div></div>",
+          "label": "Asset Gallery Header",
+          "allowedParents": [
+              "asset-content"
+          ],
+          "description": "Header and Title Field",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_header_full.svg"
+      },
+      {
+          "name": "asset-head-video",
+          "html": "<div class=\"m-asset-head\"><div class=\"m-asset-head__bar\"><h2 class=\"m-asset-head__type\">Video</h2></div><div class=\"m-asset-head__section\"><h3 class=\"a-asset-section-title\">Title</h3><div class=\"a-asset-input\" doc-editable=\"title\">Video Title</div></div></div>",
+          "label": "Asset Video Header",
+          "allowedParents": [
+              "asset-content"
+          ],
+          "description": "Header and Title Field",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_header_full.svg"
+      },
+      {
+          "name": "asset-image",
+          "html": "<div class=\"m-asset-image\"><div class=\"m-asset-image__image\"><img doc-image=\"image\"></div><div class=\"m-asset-image__options\"><div class=\"a-asset-input\" doc-editable=\"caption\">Caption</div><div class=\"a-asset-input\" doc-editable=\"source\">Source</div></div></div>",
+          "label": "Asset Image",
+          "description": "Image with caption",
+          "allowedParents": [
+              "asset-content",
+              "asset-container-gallery",
+              "teaser-gallery-template",
+              "teaser-gallery-hero-template"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_image.svg",
+          "directives": {
+              "image": {
+                  "imageRatios": [
+                      "16:9",
+                      "1:1",
+                      "4:3",
+                      "3:4"
+                  ],
+                  "allowOriginalRatio": true
+              }
+          }
+      },
+      {
+          "name": "asset-container-gallery",
+          "html": "<div class=\"m-asset-main-gallery\"><h3 class=\"a-asset-section-title\">Images</h3><div doc-container=\"gallery\"></div></div>",
+          "label": "Gallery Container",
+          "description": "1 column to add images",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout.svg",
+          "directives": {
+              "gallery": {
+                  "allowedChildren": [
+                      "asset-image"
+                  ],
+                  "defaultComponents": {
+                      "asset-image": "asset-image"
+                  }
+              }
+          }
+      },
+      {
+          "name": "asset-content",
+          "html": "<article class=\"o-asset-content\"><header class=\"o-asset-content__header\" doc-container=\"header\"></header><main class=\"o-asset-content__main\" doc-container=\"main\"></main></article>",
+          "label": "Asset Content",
+          "description": "Main container for assets",
+          "directives": {
+              "header": {
+                  "allowedChildren": [
+                      "asset-head-gallery",
+                      "asset-head-video"
+                  ]
+              }
+          },
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_1_column.svg"
+      },
+      {
+          "name": "asset-container-video",
+          "html": "<div class=\"m-asset-main-video\"><h3 class=\"a-asset-section-title\">Preview Image</h3><div class=\"m-asset-image\"><img class=\"m-asset-image__image\" doc-image=\"image\"></div><h3 class=\"a-asset-section-title\">Embed Code</h3><div class=\"m-asset-html\" doc-html=\"iframe\"><div class=\"a-asset-placeholder\"></div></div></div>",
+          "label": "Video Container",
+          "description": "Preview Image and Video",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout.svg"
+      },
+      {
+          "name": "article-container",
+          "html": "<article class=\"article-content\"><header class=\"article-content__header\" doc-container=\"header\"></header><div class=\"article-content__body\"><main class=\"article-content__main\" doc-container=\"main\"></main><aside class=\"article-content__sidebar\"><div doc-container=\"sidebar-ads-top\"></div><div doc-container=\"sidebar\"></div><div doc-container=\"sidebar-ads-bottom\"></div></aside></div><section class=\"article-content__footer\" doc-container=\"footer\"></section></article>",
+          "label": "Article Container",
+          "description": "Main container for articles",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_2_columns_uneven.svg",
+          "directives": {
+              "header": {
+                  "allowedChildren": [
+                      "head"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "main": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-author",
+                      "video-container",
+                      "asset-container-gallery",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "sidebar-ads-top": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "ad-rectangle-resolved"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "sidebar": {
+                  "allowedChildren": [
+                      "teaser-sidebar",
+                      "sidebar-title"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "sidebar-ads-bottom": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "ad-rectangle-resolved"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "footer": {
+                  "allowedChildren": [
+                      "halves",
+                      "halves-article-footer",
+                      "2-col-teaser-stack"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              }
+          }
+      },
+      {
+          "name": "gallery-container",
+          "html": "<div class=\"gallery-container\" doc-container=\"gallery\"></div>",
+          "label": "Gallery Container",
+          "description": "1 column to add images",
+          "iconUrl": "https://livingdocs-assets.s3.amazonaws.com/magazine-design/assets/images/icons-components/icon_1_column.svg",
+          "directives": {
+              "gallery": {
+                  "allowedChildren": [
+                      "image"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              }
+          }
+      },
+      {
+          "name": "author-container",
+          "html": "<article class=\"article-content\"><div class=\"article-content__body\"><main class=\"article-content__main\" doc-container=\"main\"></main><aside class=\"article-content__sidebar\" doc-container=\"sidebar\"></aside></div></article>",
+          "label": "Author Container",
+          "description": "Main container for authors",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_2_columns_uneven.svg"
+      },
+      {
+          "name": "halves-article-footer",
+          "html": "<div class=\"container container--halves\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\"></h2><div class=\"container-grid\"><div class=\"container-grid__item\" doc-container=\"column-one\"></div><div class=\"container-grid__item\" doc-container=\"column-two\"></div></div></div>",
+          "label": "2 Columns",
+          "description": "50:50 columns",
+          "allowedParents": [
+              "article-container"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_2_columns.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "column-one": {
+                  "allowedChildren": [
+                      "teaser-card"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "column-two": {
+                  "allowedChildren": [
+                      "teaser-card"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              }
+          }
+      },
+      {
+          "name": "halves-uneven",
+          "html": "<div class=\"container container--halves-uneven\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\"></h2><div class=\"container-grid\"><div class=\"container-grid__item\" doc-container=\"column-one\"></div><div class=\"container-grid__item\" doc-container=\"column-two\"></div></div></div>",
+          "label": "2 Uneven Columns",
+          "description": "Left small, right large",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_2_columns_uneven.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "column-one": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "column-two": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              }
+          }
+      },
+      {
+          "name": "halves",
+          "html": "<div class=\"container container--halves\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\"></h2><div class=\"container-grid\"><div class=\"container-grid__item\" doc-container=\"column-one\"></div><div class=\"container-grid__item\" doc-container=\"column-two\"></div></div></div>",
+          "label": "2 Columns",
+          "description": "50:50 columns",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_2_columns.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "column-one": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-card-author",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "column-two": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              }
+          }
+      },
+      {
+          "name": "thirds",
+          "html": "<div class=\"container container--thirds\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Section title</h2><div class=\"container-grid\"><div class=\"container-grid__item\" doc-container=\"column-one\"></div><div class=\"container-grid__item\" doc-container=\"column-two\"></div><div class=\"container-grid__item\" doc-container=\"column-three\"></div></div></div>",
+          "label": "3 Columns",
+          "description": "1/3rd each",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_3_columns.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "column-one": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "column-two": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "column-three": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              }
+          }
+      },
+      {
+          "name": "quarter",
+          "html": "<div class=\"container container--quarter\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Section title</h2><div class=\"container-grid\"><div class=\"container-grid__item\" doc-container=\"column-one\"></div><div class=\"container-grid__item\" doc-container=\"column-two\"></div><div class=\"container-grid__item\" doc-container=\"column-three\"></div><div class=\"container-grid__item\" doc-container=\"column-four\"></div></div></div>",
+          "label": "4 Columns",
+          "description": "1/4th each",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_4_columns.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "column-one": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "column-two": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "column-three": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "column-four": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              }
+          }
+      },
+      {
+          "name": "whole",
+          "html": "<div class=\"container\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Section title</h2><div class=\"container-grid container-grid--whole\"><div class=\"container-grid__item\" doc-container=\"column-one\"></div></div></div>",
+          "label": "1 Column",
+          "description": "One large column for content",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_1_column.svg",
+          "properties": [
+              "container-style-breath",
+              "container-style-lined"
+          ],
+          "directives": {
+              "column-one": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe",
+                      "tweet",
+                      "section-title",
+                      "subtitle",
+                      "image",
+                      "bullet-list",
+                      "paragraph",
+                      "separator",
+                      "quote",
+                      "teaser-card-no-image",
+                      "teaser-card-numbered",
+                      "teaser-card",
+                      "teaser-gallery-hero",
+                      "teaser-gallery",
+                      "teaser-hero",
+                      "teaser-video-hero",
+                      "teaser-video",
+                      "ad-leaderboard-resolved"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              }
+          }
+      },
+      {
+          "name": "video-container",
+          "html": "<div class=\"video-container\"><div class=\"content-image\" doc-container=\"image\"></div><div class=\"content-video\" doc-container=\"video\"></div></div>",
+          "label": "Video Container",
+          "description": "Teaser image and video embed",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_1_column.svg",
+          "directives": {
+              "image": {
+                  "allowedChildren": [
+                      "image"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              },
+              "video": {
+                  "allowedChildren": [
+                      "free-html",
+                      "iframe"
+                  ],
+                  "defaultComponents": {
+                      "paragraph": "paragraph",
+                      "image": "image",
+                      "html": "free-html"
+                  }
+              }
+          }
+      },
+      {
+          "name": "free-html",
+          "html": "<div doc-html=\"free-html\" class=\"placeholder--free-html\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Free HTML",
+          "description": "Only for developers",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_embed.svg"
+      },
+      {
+          "name": "iframe",
+          "html": "<div doc-html=\"iframe\" class=\"placeholder--free-html\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Iframe",
+          "allowedParents": [
+              "whole",
+              "halves",
+              "thirds",
+              "quarter",
+              "halves-uneven",
+              "video-container",
+              "author-container",
+              "article-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "teaser-video-template",
+              "halves-article-footer",
+              "teaser-video-hero-template"
+          ],
+          "description": "Embed anything an iframe can do",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_embed.svg",
+          "properties": [
+              "position"
+          ]
+      },
+      {
+          "name": "teaser-author-template",
+          "html": "<div class=\"author-card\"><div class=\"author-card__image\"><a href doc-link=\"link\"><img doc-image=\"image\"></a></div><div class=\"author-card__body\"><h5 doc-editable=\"title\"></h5><p doc-editable=\"text\"></p><a href doc-link=\"authorLink\">All work</a></div></div>",
+          "label": "Teaser Author Template"
+      },
+      {
+          "name": "teaser-author",
+          "html": "<div doc-include=\"embed\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Author",
+          "description": "Teaser to author page",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_author.svg",
+          "directives": {
+              "embed": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "author-embed"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "author"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "author"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-sidebar-resolved",
+          "html": "<div class=\"teaser-card teaser-card--sidebar\"><span class=\"teaser-card__flag\">News</span><h2 class=\"teaser-card__title\"><a href>The art of TV series finale</a></h2><ul class=\"teaser-card__byline\"><li>by <a href>Kelly Swanson</a></li><li>15 minutes ago</li></ul></div>",
+          "label": "Teaser Sidebar Resolved"
+      },
+      {
+          "name": "teaser-sidebar-template",
+          "html": "<div class=\"teaser-card teaser-card--sidebar\"><span class=\"teaser-card__flag\" doc-editable=\"flag\" doc-optional=\"true\"></span><h2 class=\"teaser-card__title\"><a href doc-link=\"link\" doc-editable=\"title\"></a></h2><ul class=\"teaser-card__byline\"><li>by <a href doc-link=\"authorLink\" doc-editable=\"author\"></a></li><li doc-editable=\"date\"></li></ul></div>",
+          "label": "Teaser Sidebar Template"
+      },
+      {
+          "name": "teaser-sidebar",
+          "html": "<div doc-include=\"embed\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Teaser",
+          "allowedParents": [
+              "article-container"
+          ],
+          "description": "Article teaser in the sidebar",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_without_image.svg",
+          "directives": {
+              "embed": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "sidebar-embed"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "author-head",
+          "html": "<div class=\"author-card author-card--big\"><div class=\"author-card__image\"><img doc-image=\"image\"></div><div class=\"author-card__body\"><h2 class=\"author-card__title\" doc-editable=\"name\">Author name</h2><p doc-editable=\"biography\">Biography</p></div></div>",
+          "label": "Author Head",
+          "description": "Header for author pages",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_header_simple.svg"
+      },
+      {
+          "name": "tweet",
+          "html": "<div doc-html=\"tweet\" class=\"placeholder--twitter\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Tweet",
+          "description": "Embed a tweet",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_twitter.svg"
+      },
+      {
+          "name": "head",
+          "html": "<div class=\"head\"><span class=\"head__flag\" doc-editable=\"flag\" doc-optional=\"true\">Flag</span><h1 class=\"head__title\" doc-editable=\"title\">Title</h1><p class=\"head__lead\" doc-editable=\"text\">Lead</p><div class=\"head__meta\"><span doc-editable=\"author\">Author</span><span>,</span> <span doc-editable=\"date\">Date</span></div></div>",
+          "label": "Title and Lead",
+          "allowedParents": [
+              "article-container",
+              "asset-content"
+          ],
+          "description": "Header and author line",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_header_full.svg"
+      },
+      {
+          "name": "section-title",
+          "html": "<h2 class=\"section-title\" doc-editable=\"title\">Section title</h2>",
+          "label": "Section title",
+          "description": "Large title",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_header_simple.svg"
+      },
+      {
+          "name": "sidebar-title",
+          "html": "<h2 class=\"sidebar-title\" doc-editable=\"title\">Sidebar Title</h2>",
+          "label": "Sidebar title",
+          "allowedParents": [
+              "article-container"
+          ],
+          "description": "A title for the sidebar",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_header_simple.svg"
+      },
+      {
+          "name": "subtitle",
+          "html": "<h2 class=\"subtitle\" doc-editable=\"title\">Subtitle</h2>",
+          "label": "Subtitle",
+          "allowedParents": [
+              "article-container"
+          ],
+          "description": "A subtitle for articles",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_header_simple.svg"
+      },
+      {
+          "name": "image",
+          "html": "<figure class=\"image\"><img doc-image=\"image\"><figcaption class=\"image__caption\" doc-editable=\"caption\" doc-optional=\"true\">Add image caption</figcaption></figure>",
+          "label": "Image",
+          "properties": [
+              "image-position"
+          ],
+          "description": "Image with caption",
+          "allowedParents": [
+              "article-container",
+              "video-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "teaser-author-template",
+              "author-head",
+              "teaser-card-author-template",
+              "teaser-card-template",
+              "teaser-gallery-hero-template",
+              "teaser-gallery-template",
+              "teaser-hero-template",
+              "teaser-video-hero-template",
+              "teaser-video-template"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_image.svg",
+          "directives": {
+              "image": {
+                  "imageRatios": [
+                      "16:9",
+                      "1:1",
+                      "4:3",
+                      "3:4"
+                  ],
+                  "allowOriginalRatio": true
+              }
+          }
+      },
+      {
+          "name": "article-layout-footer",
+          "html": "<nav class=\"page-foot__wrapper\"><ul class=\"footer-links footer-links--left-aligned\"><li>&#xA9; 2018 Livingdocs Times</li><li><a href=\"mailto:contact@livingdocs.io\">Contact us</a></li><li><a href=\"https://www.livingdocs.io/product-5919\">Work With us</a></li><li><a href=\"https://github.com/livingdocsIO/magazine-example\">Github</a></li></ul><ul class=\"footer-links footer-links--right-aligned\"><li>This is an open-source Demo Magazine built with Livingdocs. Check out the code and make it yours!</li></ul></nav>",
+          "label": "Article layout footer",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout_footer.svg"
+      },
+      {
+          "name": "article-layout-header-item",
+          "html": "<div class=\"main-nav__item\"><a doc-link=\"link\" doc-editable=\"text\"></a></div>",
+          "label": "Article layout header item",
+          "properties": [
+              "selected-menu"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout_header.svg"
+      },
+      {
+          "name": "article-layout-header",
+          "html": "<div><div class=\"logo\"><a href=\"/\"><img class=\"logo__desktop\" src=\"/assets/images/li-logo.svg\" alt=\"logo\"><img class=\"logo__handheld\" src=\"/assets/images/li-logo-handheld.svg\" alt=\"logo\"></a></div><nav class=\"meta-nav\"><div class=\"meta-nav__item\"><a href=\"https://github.com/livingdocsIO/magazine-example\">Source Code</a></div><div class=\"meta-nav__item meta-nav__item--highlight\"><a href=\"https://www.livingdocs.io/pssst\">Subscribe</a></div></nav><div class=\"nav-container\"><nav doc-container=\"header-item\" class=\"main-nav\" role=\"navigation\"></nav></div><div class=\"ad ad--head\"><a href=\"https://www.livingdocs.io\" target=\"_blank\"><img style=\"max-height: 90px\" src=\"/assets/images/ads/leaderboards/ad-exclusive.gif\"></a></div></div>",
+          "label": "Article layout header",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout_header.svg"
+      },
+      {
+          "name": "default-layout-footer",
+          "html": "<nav class=\"page-foot__wrapper\"><ul class=\"footer-links footer-links--left-aligned\"><li>&#xA9; 2018 Livingdocs Times</li><li><a href=\"mailto:contact@livingdocs.io\">Contact us</a></li><li><a href=\"https://www.livingdocs.io/product-5919\">Work With us</a></li><li><a href=\"https://github.com/livingdocsIO/magazine-example\">Github</a></li></ul><ul class=\"footer-links footer-links--right-aligned\"><li>This is an open-source Demo Magazine built with Livingdocs. Check out the code and make it yours!</li></ul></nav>",
+          "label": "Default layout footer",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout_footer.svg"
+      },
+      {
+          "name": "article-layout",
+          "html": "<div><header class=\"page-head\" doc-container=\"header\" role=\"banner\"></header><main class=\"wrapper wrapper--article\" doc-container=\"content\" role=\"main\"></main><footer class=\"page-foot\" doc-container=\"footer\" role=\"footer\"></footer></div>",
+          "label": "Article Layout",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout.svg"
+      },
+      {
+          "name": "default-layout-header-item",
+          "html": "<div class=\"main-nav__item\"><a doc-link=\"link\" doc-editable=\"text\"></a></div>",
+          "label": "Default layout header item",
+          "properties": [
+              "selected-menu"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout_header.svg"
+      },
+      {
+          "name": "default-layout-header",
+          "html": "<div><div class=\"logo\"><a href=\"/\"><img class=\"logo__desktop\" src=\"/assets/images/li-logo.svg\" alt=\"logo\"><img class=\"logo__handheld\" src=\"/assets/images/li-logo-handheld.svg\" alt=\"logo\"></a></div><nav class=\"meta-nav\"><div class=\"meta-nav__item\"><a href=\"https://github.com/livingdocsIO/magazine-example\">Source Code</a></div><div class=\"meta-nav__item meta-nav__item--highlight\"><a href=\"https://www.livingdocs.io/pssst\">Subscribe</a></div></nav><div class=\"nav-container\"><nav doc-container=\"header-item\" class=\"main-nav\" role=\"navigation\"></nav></div><div class=\"ad ad--head\"><a href=\"https://www.livingdocs.io\" target=\"_blank\"><img style=\"max-height: 250px\" src=\"/assets/images/ads/billboards/ad-secret.gif\"></a></div></div>",
+          "label": "Default layout header",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout_header.svg"
+      },
+      {
+          "name": "default-layout",
+          "html": "<div><header class=\"page-head\" doc-container=\"header\" role=\"banner\"></header><main class=\"wrapper wrapper--default\" doc-container=\"content\" role=\"main\"></main><footer class=\"page-foot\" doc-container=\"footer\" role=\"footer\"></footer></div>",
+          "label": "Default Layout",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout.svg"
+      },
+      {
+          "name": "page-layout-footer",
+          "html": "<nav class=\"page-foot__wrapper\"><ul class=\"footer-links footer-links--left-aligned\"><li>&#xA9; 2018 Livingdocs Times</li><li><a href=\"mailto:contact@livingdocs.io\">Contact us</a></li><li><a href=\"https://www.livingdocs.io/product-5919\">Work With us</a></li><li><a href=\"https://github.com/livingdocsIO/magazine-example\">Github</a></li></ul><ul class=\"footer-links footer-links--right-aligned\"><li>This is an open-source Demo Magazine built with Livingdocs. Check out the code and make it yours!</li></ul></nav>",
+          "label": "Page layout footer",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout_footer.svg"
+      },
+      {
+          "name": "page-layout-header-item",
+          "html": "<div class=\"main-nav__item\"><a doc-link=\"link\" doc-editable=\"text\"></a></div>",
+          "label": "Page layout header item",
+          "properties": [
+              "selected-menu"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout_header.svg"
+      },
+      {
+          "name": "page-layout",
+          "html": "<div><header class=\"page-head\" doc-container=\"header\" role=\"banner\"></header><main class=\"wrapper wrapper--default\" doc-container=\"content\" role=\"main\"></main><footer class=\"page-foot\" doc-container=\"footer\" role=\"footer\"></footer></div>",
+          "label": "Page Layout",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout.svg"
+      },
+      {
+          "name": "page-layout-header",
+          "html": "<div><div class=\"logo\"><a href=\"/\"><img class=\"logo__desktop\" src=\"/assets/images/li-logo.svg\" alt=\"logo\"><img class=\"logo__handheld\" src=\"/assets/images/li-logo-handheld.svg\" alt=\"logo\"></a></div><nav class=\"meta-nav\"><div class=\"meta-nav__item\"><a href=\"https://github.com/livingdocsIO/magazine-example\">Source Code</a></div><div class=\"meta-nav__item meta-nav__item--highlight\"><a href=\"https://www.livingdocs.io/pssst\">Subscribe</a></div></nav><div class=\"nav-container\"><nav doc-container=\"header-item\" class=\"main-nav\" role=\"navigation\"></nav></div><div class=\"ad ad--head\"><a href=\"https://www.livingdocs.io\" target=\"_blank\"><img style=\"max-height: 250px\" src=\"/assets/images/ads/billboards/ad-secret.gif\"></a></div></div>",
+          "label": "Page layout header",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_layout_header.svg"
+      },
+      {
+          "name": "bullet-list-item",
+          "html": "<li doc-editable=\"text\">List item</li>",
+          "label": "Bullet List Item",
+          "description": "A bullet list item",
+          "allowedParents": [
+              "bullet-list"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_unordered_list_item.svg"
+      },
+      {
+          "name": "bullet-list",
+          "html": "<ul doc-container=\"list\" class=\"ld-list\"></ul>",
+          "label": "Bullet List",
+          "description": "A bullet list",
+          "allowedParents": [
+              "article-container"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_unordered_list.svg",
+          "properties": [
+              "list-type"
+          ],
+          "directives": {
+              "list": {
+                  "defaultComponents": {
+                      "paragraph": "bullet-list-item"
+                  },
+                  "defaultContent": [
+                      {
+                          "component": "bullet-list-item"
+                      }
+                  ]
+              }
+          }
+      },
+      {
+          "name": "2-teaser-row",
+          "html": "<div class=\"container container--halves\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Topic</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser1\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser2\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "2 Teaser Row",
+          "description": "2 Teasers next to each other",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_2_teaser_row_with_image.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "2-col-teaser-stack",
+          "html": "<div class=\"container container--halves\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Topic</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser1-left\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser2-left\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser3-left\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser4-left\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser1-right\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser2-right\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser3-right\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser4-right\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "2 Column Teaser Stack",
+          "description": "Two stacks of Article Teasers",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_stack_2_columns_with_image.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1-left": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2-left": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3-left": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser4-left": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser1-right": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2-right": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3-right": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser4-right": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "authors-and-popular",
+          "html": "<div class=\"container container--halves\"><div class=\"container-grid\"><div class=\"container-grid__item\"><h2 class=\"section-title\" doc-editable=\"title-left\" doc-optional=\"true\">By Author</h2><div doc-include=\"teaser1-left\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser2-left\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser3-left\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser4-left\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><h2 class=\"section-title\" doc-editable=\"title-right\" doc-optional=\"true\">Most Popular</h2><div doc-include=\"teaser1-right\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser2-right\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser3-right\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser4-right\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "Authors & Popular",
+          "description": "Authors and Most Popular in 2 Columns",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_authors_and_popular.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1-left": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2-left": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3-left": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser4-left": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser1-right": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2-right": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3-right": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser4-right": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "4-teaser-row-textonly",
+          "html": "<div class=\"container container--quarter\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Topic</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser1\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser2\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser3\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser4\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "4 Text-Teaser Row",
+          "description": "4 Text-Teasers next to each other",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_4_teaser_row_without_image.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-no-image"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-no-image"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-no-image"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser4": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-no-image"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "4-teaser-row",
+          "html": "<div class=\"container container--quarter\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Topic</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser1\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser2\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser3\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser4\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "4 Teaser Row",
+          "description": "4 Teasers next to each other",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_4_teaser_row_with_image.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser4": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "1-teaser-row",
+          "html": "<div class=\"container container--whole container--breath\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Topic</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "1 Teaser Row",
+          "description": "2 Teasers next to each other",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_1_teaser_row_with_image.svg",
+          "properties": [
+              "container-style-lined",
+              "teaser-image-position"
+          ],
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-stack",
+          "html": "<div class=\"container container--whole container--breath\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Topic</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser1\" class=\"placeholder--teaser-card teaser-card--left-aligned-img\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser2\" class=\"placeholder--teaser-card teaser-card--left-aligned-img\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser3\" class=\"placeholder--teaser-card teaser-card--left-aligned-img\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser4\" class=\"placeholder--teaser-card teaser-card--left-aligned-img\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "Teaser Stack",
+          "description": "A stack of Article Teasers",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_stack_with_image.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser4": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "gallery-block",
+          "html": "<div class=\"container container--halves-uneven\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Photo Galleries</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser2\" class=\"placeholder--teaser-gallery\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser3\" class=\"placeholder--teaser-gallery\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser1\" class=\"placeholder--teaser-gallery\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "Gallery Block",
+          "description": "3 Galleries in a Block",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_slideshow_block.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "gallery-hero"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "gallery"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "gallery"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "3-teaser-row",
+          "html": "<div class=\"container container--thirds\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Topic</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser1\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser2\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser3\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "3 Teaser Row",
+          "description": "3 Teasers next to each other",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_3_teaser_row_with_image.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "video-block",
+          "html": "<div class=\"container container--halves-uneven\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Videos</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser2\" class=\"placeholder--teaser-video\"><div class=\"placeholder__img\"></div></div><div doc-include=\"teaser3\" class=\"placeholder--teaser-video\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser1\" class=\"placeholder--teaser-video\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "Video Block",
+          "description": "3 Videos in a Block",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_video_block.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "video-hero"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "video"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "video"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "3-teaser-row-textonly",
+          "html": "<div class=\"container container--thirds\"><h2 class=\"container__title\" doc-editable=\"title\" doc-optional=\"true\">Topic</h2><div class=\"container-grid\"><div class=\"container-grid__item\"><div doc-include=\"teaser1\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser2\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div><div class=\"container-grid__item\"><div doc-include=\"teaser3\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div></div></div></div>",
+          "label": "3 Text-Teaser Row",
+          "description": "3 Text-Teasers next to each other",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_3_teaser_row_without_image.svg",
+          "properties": [
+              "container-style-lined"
+          ],
+          "directives": {
+              "teaser1": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-no-image"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser2": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-no-image"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              },
+              "teaser3": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-no-image"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-card-author-template",
+          "html": "<div class=\"teaser-card teaser-card--author\"><figure class=\"teaser-card__figure\"><a doc-link=\"authorLink\"><img class=\"teaser-card__image\" doc-image=\"image\"></a></figure><div class=\"teaser-card__body\"><span class=\"teaser-card__flag teaser-card__flag--black\" doc-editable=\"title\"></span><h2 class=\"teaser-card__title\"><a href doc-link=\"link\" doc-editable=\"text\"></a></h2></div></div>",
+          "label": "Author Card Template"
+      },
+      {
+          "name": "teaser-card-no-image-template",
+          "html": "<div class=\"teaser-card\"><div class=\"teaser-card__body\"><span class=\"teaser-card__flag\" doc-editable=\"flag\" doc-optional=\"true\"></span><h2 class=\"teaser-card__title\"><a href doc-link=\"link\" doc-editable=\"title\"></a></h2><p class=\"teaser-card__text\" doc-editable=\"text\"></p><ul class=\"teaser-card__byline\"><li>by <a href doc-link=\"authorLink\" doc-editable=\"author\"></a></li><li doc-editable=\"date\"></li></ul></div></div>",
+          "label": "Teaser Card"
+      },
+      {
+          "name": "teaser-card-author",
+          "html": "<div doc-include=\"teaser\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Author Card",
+          "allowedParents": [
+              "whole",
+              "halves",
+              "quarter",
+              "thirds",
+              "halves-uneven",
+              "article-container"
+          ],
+          "description": "Article featured by author",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_author.svg",
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-author"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-card-numbered",
+          "html": "<div doc-include=\"teaser\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Numbered Card",
+          "description": "Numbered 1 through n",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_without_image.svg",
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-numbered"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-card-no-image",
+          "html": "<div doc-include=\"teaser\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Text-only Card",
+          "description": "Only text, no image",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_without_image.svg",
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card-no-image"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-card-template",
+          "html": "<div class=\"teaser-card\"><figure class=\"teaser-card__figure\"><a href doc-link=\"link\"><img class=\"teaser-card__image\" doc-image=\"image\"></a></figure><div class=\"teaser-card__body\"><span class=\"teaser-card__flag\" doc-editable=\"flag\" doc-optional=\"true\"></span><h2 class=\"teaser-card__title\"><a href doc-link=\"link2\" doc-editable=\"title\"></a></h2><p class=\"teaser-card__text\" doc-editable=\"text\"></p><ul class=\"teaser-card__byline\"><li>by <a doc-link=\"authorLink\" doc-editable=\"author\"></a></li><li doc-editable=\"date\"></li></ul></div></div>",
+          "label": "Teaser Card"
+      },
+      {
+          "name": "teaser-card",
+          "html": "<div doc-include=\"teaser\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Card",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "description": "Standard teaser with image",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_with_image.svg",
+          "properties": [
+              "teaser-image-position"
+          ],
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "card"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-gallery-hero-template",
+          "html": "<div class=\"teaser-gallery\"><div class=\"teaser-hero teaser-hero--video\"><div class=\"teaser-hero__header\" doc-image=\"image\"><div class=\"teaser-hero__header-text\"><h2 class=\"teaser-hero__title\" doc-editable=\"title\"></h2><span class=\"teaser-hero__label\"><svg class=\"teaser-hero__icon teaser-hero__icon--photo\" viewbox=\"0 0 24 24\"><path fill=\"#000000\" d=\"M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z\"/></svg> Photos</span></div></div><p class=\"teaser-hero__text\" doc-editable=\"text\"></p></div><div class=\"teaser-gallery__images\" doc-container=\"images\"></div><div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"><div class=\"pswp__bg\"></div><div class=\"pswp__scroll-wrap\"><div class=\"pswp__container\"><div class=\"pswp__item\"></div><div class=\"pswp__item\"></div><div class=\"pswp__item\"></div></div><div class=\"pswp__ui pswp__ui--hidden\"><div class=\"pswp__top-bar\"><div class=\"pswp__counter\"></div><button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button> <button class=\"pswp__button pswp__button--share\" title=\"Share\"></button> <button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button> <button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button><div class=\"pswp__preloader\"><div class=\"pswp__preloader__icn\"><div class=\"pswp__preloader__cut\"><div class=\"pswp__preloader__donut\"></div></div></div></div></div><div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\"><div class=\"pswp__share-tooltip\"></div></div><button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\"></button> <button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\"></button><div class=\"pswp__caption\"><div class=\"pswp__caption__center\"></div></div></div></div></div></div>",
+          "label": "Image Gallery Hero Teaser Template"
+      },
+      {
+          "name": "teaser-gallery-hero",
+          "html": "<div doc-include=\"teaser\" class=\"placeholder--teaser-gallery\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Image Gallery Hero",
+          "description": "Large gallery teaser",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_with_image.svg",
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "gallery-hero"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-card-numbered-template",
+          "html": "<div class=\"teaser-card teaser-card--numbered\"><span class=\"teaser-card__number\">.</span><div class=\"teaser-card__body\"><span class=\"teaser-card__flag\" doc-editable=\"flag\" doc-optional=\"true\"></span><h2 class=\"teaser-card__title\"><a doc-link=\"link\" doc-editable=\"title\"></a></h2><ul class=\"teaser-card__byline\"><li>by <a href doc-link=\"authorLink\" doc-editable=\"author\"></a></li><li doc-editable=\"date\"></li></ul></div></div>",
+          "label": "Numbered Teaser Card"
+      },
+      {
+          "name": "teaser-gallery-template",
+          "html": "<div class=\"teaser-gallery\"><div class=\"teaser-card\"><figure class=\"teaser-card__figure\"><img class=\"teaser-card__image\" doc-image=\"image\"><figcaption class=\"teaser-card__caption\"><svg class=\"teaser-card__icon teaser-card__icon--photo\" viewbox=\"0 0 24 24\"><path fill=\"#000000\" d=\"M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z\"/></svg> Photos</figcaption></figure><div class=\"teaser-card__body\"><h2 class=\"teaser-card__title\" doc-editable=\"title\"></h2></div></div><div class=\"teaser-gallery__images\" doc-container=\"images\"></div><div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"><div class=\"pswp__bg\"></div><div class=\"pswp__scroll-wrap\"><div class=\"pswp__container\"><div class=\"pswp__item\"></div><div class=\"pswp__item\"></div><div class=\"pswp__item\"></div></div><div class=\"pswp__ui pswp__ui--hidden\"><div class=\"pswp__top-bar\"><div class=\"pswp__counter\"></div><button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button> <button class=\"pswp__button pswp__button--share\" title=\"Share\"></button> <button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button> <button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button><div class=\"pswp__preloader\"><div class=\"pswp__preloader__icn\"><div class=\"pswp__preloader__cut\"><div class=\"pswp__preloader__donut\"></div></div></div></div></div><div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\"><div class=\"pswp__share-tooltip\"></div></div><button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\"></button> <button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\"></button><div class=\"pswp__caption\"><div class=\"pswp__caption__center\"></div></div></div></div></div></div>",
+          "label": "Image Gallery Teaser"
+      },
+      {
+          "name": "teaser-gallery",
+          "html": "<div doc-include=\"teaser\" class=\"placeholder--teaser-gallery\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Image Gallery",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "description": "Small gallery teaser",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_with_image.svg",
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "gallery"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "gallery"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-hero-template",
+          "html": "<div class=\"teaser-hero\"><a href doc-link=\"link\"><div class=\"teaser-hero__header\" doc-image=\"image\"><div class=\"teaser-hero__header-text\"><span class=\"teaser-hero__flag\" doc-editable=\"flag\" doc-optional=\"true\"></span><h2 class=\"teaser-hero__title\" doc-editable=\"title\"></h2></div></div></a><p class=\"teaser-hero__text\" doc-editable=\"text\"></p><ul class=\"teaser-hero__byline\"><li>by <a doc-link=\"authorLink\" doc-editable=\"author\"></a></li><li doc-editable=\"date\"></li></ul></div>",
+          "label": "Teaser Hero"
+      },
+      {
+          "name": "teaser-hero",
+          "html": "<div doc-include=\"teaser\" class=\"placeholder--teaser-card\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Hero",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "description": "Large teaser with image",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_teaser_with_image.svg",
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "hero"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "regular"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-video-hero",
+          "html": "<div doc-include=\"teaser\" class=\"placeholder--teaser-video\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Video Hero",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "description": "Large teaser with a video",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_video.svg",
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "video-hero"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "teaser-video-hero-template",
+          "html": "<div class=\"teaser-video\"><div class=\"teaser-hero teaser-hero--video\"><div class=\"teaser-hero__header\" doc-image=\"image\"><div class=\"teaser-hero__header-text\"><h2 class=\"teaser-hero__title\" doc-editable=\"title\"></h2><span class=\"teaser-hero__label\"><svg class=\"teaser-hero__icon teaser-hero__icon--play\" viewbox=\"0 0 24 24\"><path fill=\"#fff\" d=\"M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z\"/></svg> Video</span></div></div><p class=\"teaser-hero__text\" doc-editable=\"text\"></p></div><div class=\"teaser-video__markup\" doc-container=\"video\"></div><div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"><div class=\"pswp__bg\"></div><div class=\"pswp__scroll-wrap\"><div class=\"pswp__container\"><div class=\"pswp__item\"></div><div class=\"pswp__item\"></div><div class=\"pswp__item\"></div></div><div class=\"pswp__ui pswp__ui--hidden\"><div class=\"pswp__top-bar\"><div class=\"pswp__counter\"></div><button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button> <button class=\"pswp__button pswp__button--share\" title=\"Share\"></button> <button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button> <button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button><div class=\"pswp__preloader\"><div class=\"pswp__preloader__icn\"><div class=\"pswp__preloader__cut\"><div class=\"pswp__preloader__donut\"></div></div></div></div></div><div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\"><div class=\"pswp__share-tooltip\"></div></div><button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\"></button> <button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\"></button><div class=\"pswp__caption\"><div class=\"pswp__caption__center\"></div></div></div></div></div></div>",
+          "label": "Video Teaser Template"
+      },
+      {
+          "name": "teaser-video-template",
+          "html": "<div class=\"teaser-video\"><div class=\"teaser-card\"><figure class=\"teaser-card__figure\"><img class=\"teaser-card__image\" doc-image=\"image\"><figcaption class=\"teaser-card__caption\"><svg class=\"teaser-card__icon teaser-card__icon--play\" viewbox=\"0 0 24 24\"><path fill=\"#fff\" d=\"M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z\"/></svg> Video</figcaption></figure><div class=\"teaser-card__body\"><h2 class=\"teaser-card__title\" doc-editable=\"title\"></h2><p class=\"teaser-card__text\" doc-editable=\"text\" doc-optional=\"true\"></p></div></div><div class=\"teaser-video__markup\" doc-container=\"video\"></div><div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\"><div class=\"pswp__bg\"></div><div class=\"pswp__scroll-wrap\"><div class=\"pswp__container\"><div class=\"pswp__item\"></div><div class=\"pswp__item\"></div><div class=\"pswp__item\"></div></div><div class=\"pswp__ui pswp__ui--hidden\"><div class=\"pswp__top-bar\"><div class=\"pswp__counter\"></div><button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button> <button class=\"pswp__button pswp__button--share\" title=\"Share\"></button> <button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button> <button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button><div class=\"pswp__preloader\"><div class=\"pswp__preloader__icn\"><div class=\"pswp__preloader__cut\"><div class=\"pswp__preloader__donut\"></div></div></div></div></div><div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\"><div class=\"pswp__share-tooltip\"></div></div><button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\"></button> <button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\"></button><div class=\"pswp__caption\"><div class=\"pswp__caption__center\"></div></div></div></div></div></div>",
+          "label": "Video Teaser Template"
+      },
+      {
+          "name": "teaser-video",
+          "html": "<div doc-include=\"teaser\" class=\"placeholder--teaser-video\"><div class=\"placeholder__img\"></div></div>",
+          "label": "Video Teaser",
+          "allowedParents": [
+              "article-container",
+              "author-container",
+              "asset-container-gallery",
+              "gallery-container",
+              "video-container",
+              "halves-uneven",
+              "halves-article-footer",
+              "halves",
+              "quarter",
+              "thirds",
+              "whole"
+          ],
+          "description": "Small teaser with a video",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_video.svg",
+          "directives": {
+              "teaser": {
+                  "service": "teaser",
+                  "defaultParams": {
+                      "layout": "video"
+                  },
+                  "config": {
+                      "search": {
+                          "displayFilters": [
+                              "documentState",
+                              "timeRange"
+                          ],
+                          "defaultQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "relevance"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ],
+                          "emptySearchQueries": [
+                              {
+                                  "type": "sortBy",
+                                  "value": "-updated_at"
+                              },
+                              {
+                                  "type": "contentType",
+                                  "value": "video"
+                              }
+                          ]
+                      }
+                  }
+              }
+          }
+      },
+      {
+          "name": "list-item",
+          "html": "<p class=\"list-item\" doc-editable=\"text\">An item</p>",
+          "label": "List Item",
+          "properties": [
+              "unordered"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_unordered_list_item.svg"
+      },
+      {
+          "name": "paragraph",
+          "html": "<p doc-editable=\"text\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+          "label": "Paragraph",
+          "description": "Your main writing tool",
+          "allowedParents": [
+              "article-container"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_text.svg"
+      },
+      {
+          "name": "quote",
+          "html": "<blockquote class=\"quote\"><span class=\"quote__mark\">&#x201C;</span><p class=\"quote__text\" doc-editable=\"text\">Quoted text</p><footer class=\"quote__source\">&#x2014; <span doc-editable=\"author\" doc-optional=\"true\">Author</span></footer></blockquote>",
+          "label": "Quote",
+          "properties": [
+              "large"
+          ],
+          "allowedParents": [
+              "article-container"
+          ],
+          "description": "Large text in quotes",
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_quote.svg"
+      },
+      {
+          "name": "separator",
+          "html": "<hr class=\"separator\">",
+          "label": "Separator",
+          "description": "A vertical line",
+          "allowedParents": [
+              "article-container"
+          ],
+          "iconUrl": "https://livingdocsio.github.io/livingdocs-design-assets/docs/icons/component-icons/icon_component_separator.svg"
+      }
+  ]
+}
