@@ -1,7 +1,7 @@
 
 const {transformDocument} = require('./article_transformation')
 const {getLivingdoc, getMedia} = require('./livingdocs_api')
-const {createArticle, createFile, saveObject, createDossier, uploadImage, login, logout, linkAssetImage} = require('./woodwing/api')
+const {createArticle, createFile, saveObject, createDossier, uploadImage, login, logout, linkAssetImage, linkAssetToDocument} = require('./woodwing/api')
 
 const useWoodwingAssets = `${process.env.USE_WW_ASSETS}` === 'true' || false
 const publication = {id: process.env.WW_PUBLICATION_ID}
@@ -14,7 +14,7 @@ exports.exportDocument = async function (event) {
   const {livingdoc, title, imageComponents} = await getLivingdoc({
     projectId: event.projectId, documentId: event.publicationEvent.documentId})
   const ticket = await login({user: username, password: password})
-  const dossierId = await createDossier({ticket, articleName: title, publication, category})
+  const dossier = await createDossier({ticket, articleName: title, publication, category})
 
   const uploadedImages = []
   if (!useWoodwingAssets) {
@@ -23,7 +23,7 @@ exports.exportDocument = async function (event) {
       try {
         const imageId = await uploadImage({
           ticket,
-          dossierId,
+          dossierId: dossier.ID,
           publication,
           category,
           originalUrl: imageComponent.directives.image[0].content.originalUrl})
@@ -44,7 +44,7 @@ exports.exportDocument = async function (event) {
         let id = media.externalId
         if (media.systemName === 'WoodWing') {
           id = await linkAssetImage(
-            {ticket, id: media.externalId, name: media.asset.filename, dossierId})
+            {ticket, id: media.externalId, name: media.asset.filename, dossier})
         }
         uploadedImages.push({
           imageComponent: imageComponents[i], id: id, system: media.system})
@@ -60,13 +60,24 @@ exports.exportDocument = async function (event) {
     const document = await transformDocument({livingdoc, uploadedImages})
 
     const createdArticle =
-      await createArticle({ticket, articleName: title, publication, category, dossierId, template})
+      await createArticle({
+        ticket, articleName: title, publication, category, dossierId: dossier.ID, template})
     const customFileUrl =
       await createFile({ticket, document})
 
+    for (let i = 0; i < uploadedImages.length; i++) {
+      let result = await linkAssetToDocument({
+        ticket,
+        id: uploadedImages[i].id,
+        name: uploadedImages[i].name,
+        dossier,
+        article: createdArticle.MetaData.BasicMetaData
+      })
+    }
+
     savedFileResponse = await saveObject({ticket, metadata: createdArticle.MetaData, customFileUrl})
   } catch (err) {
-    console.error('article could not be created and saved')
+    console.error(`article could not be created and saved. Error: ${err}`)
   }
 
   await logout({ticket})

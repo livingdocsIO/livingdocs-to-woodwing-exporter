@@ -11,6 +11,7 @@ The application can be run as express application or as serverless application o
    - `export AWS_ACCESS_KEY_ID=<your-key-here>`
    - `export AWS_SECRET_ACCESS_KEY=<your-secret-key-here>`
 - Deploy the service `serverless deploy`
+- get the logs with `serverless logs -f exportDocument`
 
 ### Run local
 Run `serverless offline` and it will be started on localhost

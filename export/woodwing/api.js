@@ -99,7 +99,7 @@ async function unlockObject ({id, ticket}) {
   return unlockResponse
 }
 
-async function linkAssetImage ({ticket, id, name, dossierId}) {
+async function linkAssetImage ({ticket, id, name, dossier}) {
   const linkAssetData = {
     method: 'CreateObjectRelations',
     params: [{
@@ -108,12 +108,19 @@ async function linkAssetImage ({ticket, id, name, dossierId}) {
         Child: `_ELVIS_${id}`,
         ChildInfo: {
           ID: `_ELVIS_${id}`,
-          Name: name,
+          Name: `${name}`,
           Type: 'Image',
           Format: 'image/jpeg',
           __classname__: 'ObjectInfo'
         },
-        Parent: dossierId,
+        Parent: dossier.ID,
+        ParentInfo: {
+          Format: '',
+          ID: dossier.ID,
+          Name: dossier.Name,
+          Type: dossier.Type,
+          __classname__: 'ObjectInfo'
+        },
         Type: 'Contained'
       }],
       Ticket: ticket
@@ -126,8 +133,48 @@ async function linkAssetImage ({ticket, id, name, dossierId}) {
     method: 'POST',
     data: linkAssetData
   })
+
   return wwCreateImageResponse.data.result.Relations[0].Child
 }
+
+async function linkAssetToDocument ({ticket, id, name, dossier, article}) {
+  const linkAssetData = {
+    method: 'CreateObjectRelations',
+    params: [{
+      Relations: [{
+        __classname__: 'Relation',
+        Child: `${id}`,
+        ChildInfo: {
+          ID: `${id}`,
+          Name: `${name}`,
+          Type: 'Image',
+          Format: 'image/jpeg',
+          __classname__: 'ObjectInfo'
+        },
+        Parent: article.ID,
+        ParentInfo: {
+          Format: 'application/ww-digital+json',
+          ID: article.ID,
+          Name: article.Name,
+          Type: article.Type,
+          __classname__: 'ObjectInfo'
+        },
+        Type: 'Placed'
+      }],
+      Ticket: ticket
+    }],
+    id: 1,
+    jsonrpc
+  }
+  const wwCreateImageResponse = await request({
+    url: indexUrl,
+    method: 'POST',
+    data: linkAssetData
+  })
+
+  return wwCreateImageResponse.data.result.Relations[0].Child
+}
+
 
 async function uploadImage ({ticket, originalUrl, dossierId, publication, category}) {
   // todo: check on type image
@@ -288,7 +335,7 @@ async function createDossier ({ticket, articleName, publication, category}) {
     method: 'POST',
     data: createDossierData
   })
-  return wwCreateDossierResponse.data.result.Objects[0].MetaData.BasicMetaData.ID
+  return wwCreateDossierResponse.data.result.Objects[0].MetaData.BasicMetaData
 }
 
 async function createArticle ({ticket, articleName, publication, category, dossierId, template}) {
@@ -389,4 +436,5 @@ module.exports = {
   uploadImage,
   login,
   logout,
-  linkAssetImage}
+  linkAssetImage,
+  linkAssetToDocument}

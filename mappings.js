@@ -10,11 +10,16 @@ exports.mappings = [{
 },
 {
   sourceType: 'paragraph',
-  targetType: 'body-crosshead',
+  targetType: 'body',
   directiveMappings: [{source: 'text', target: 'text'}]
+},
+{
+  sourceType: 'quote',
+  targetType: 'quote',
+  directiveMappings: [{source: 'text', target: 'text'}, {source: 'author', target: 'author'}]
 },
 {
   sourceType: 'image',
   targetType: 'image',
-  directiveMappings: [{source: 'image', target: 'image'}, {source: 'caption', target: 'caption'}]
+  directiveMappings: [{source: 'image', target: 'image'}, {source: 'caption', target: 'caption'}, {source: 'source', target: 'credit'}]
 }]
