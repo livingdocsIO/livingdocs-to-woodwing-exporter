@@ -14,6 +14,16 @@ exports.mappings = [{
   directiveMappings: [{source: 'text', target: 'text'}]
 },
 {
+  sourceType: 'subtitle',
+  targetType: 'crosshead',
+  directiveMappings: [{source: 'title', target: 'text'}]
+},
+{
+  sourceType: 'inline-title',
+  targetType: 'crosshead',
+  directiveMappings: [{source: 'title', target: 'text'}]
+},
+{
   sourceType: 'quote',
   targetType: 'quote',
   directiveMappings: [{source: 'text', target: 'text'}, {source: 'author', target: 'author'}]
@@ -21,5 +31,7 @@ exports.mappings = [{
 {
   sourceType: 'image',
   targetType: 'image',
-  directiveMappings: [{source: 'image', target: 'image'}, {source: 'caption', target: 'caption'}, {source: 'source', target: 'credit'}]
+  directiveMappings: [{source: 'image', target: 'image'},
+    {source: 'caption', target: 'caption'},
+    {source: 'source', target: 'credit'}]
 }]
