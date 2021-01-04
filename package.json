@@ -19,6 +19,7 @@
     "chai": "^4.2.0",
     "chai-exclude": "^2.0.2",
     "mocha": "^8.1.1",
+    "serverless-dotenv-plugin": "^3.1.0",
     "serverless-offline": "^6.5.0",
     "serverless-s3-local": "^0.6.4"
   },

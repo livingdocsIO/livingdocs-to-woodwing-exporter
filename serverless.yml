@@ -15,6 +15,7 @@ service: livingdocs-to-woodwing-exporter
 
 plugins:
   - serverless-offline
+  - serverless-dotenv-plugin
 
 custom:
   serverless-offline:
