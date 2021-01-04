@@ -1,0 +1,9 @@
+# rename to config.yml
+LD_TOKEN: process.env.LI_IMPORT_ACCESS_TOKEN
+LD_SERVER_URL: 'https://server.livingdocs.io'
+USE_WW_ASSETS: 'true'
+WW_TEMPLATE_ID: '15857'
+WW_CATEGORY_ID: '665'
+WW_PUBLICATION_ID: '72'
+WW_USER: 'ghs_ld'
+WW_PASSWORD: 'ghs'
