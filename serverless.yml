@@ -15,7 +15,6 @@ service: livingdocs-to-woodwing-exporter
 
 plugins:
   - serverless-offline
-  - serverless-dotenv-plugin
 
 custom:
   serverless-offline:
@@ -23,7 +22,7 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   environment:
     LD_TOKEN: ${file(./config.yml):LD_TOKEN}
     LD_SERVER_URL: ${file(./config.yml):LD_SERVER_URL}

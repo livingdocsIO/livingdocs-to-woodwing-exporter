@@ -4,7 +4,7 @@
   "description": "ldtowwexporter",
   "main": "index.js",
   "dependencies": {
-    "@livingdocs/node-sdk": "0.6.0",
+    "@livingdocs/node-sdk": "^0.6.5",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -19,7 +19,7 @@
     "chai": "^4.2.0",
     "chai-exclude": "^2.0.2",
     "mocha": "^8.1.1",
-    "serverless-dotenv-plugin": "^3.1.0",
+    "serverless-dotenv-plugin": "^3.9.0",
     "serverless-offline": "^6.5.0",
     "serverless-s3-local": "^0.6.4"
   },
